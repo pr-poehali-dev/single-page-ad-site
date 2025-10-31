@@ -1,10 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const endDate = new Date('2025-12-31T23:59:59');
+      const now = new Date();
+      const difference = endDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -33,10 +61,40 @@ const Index = () => {
         <div className="container relative z-10 mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
-              <div className="inline-block">
-                <span className="px-4 py-2 rounded-full bg-primary/20 text-primary font-body font-medium text-sm">
-                  🔥 Акция! До 31.12.25г. карданный вал в подарок!
-                </span>
+              <div className="space-y-4">
+                <div className="inline-block">
+                  <span className="px-4 py-2 rounded-full bg-primary/20 text-primary font-body font-medium text-sm">
+                    🔥 Акция! До 31.12.25г. карданный вал в подарок!
+                  </span>
+                </div>
+                
+                <Card className="p-4 bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm inline-block">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Clock" size={20} className="text-primary" />
+                    <div className="font-body text-sm text-muted-foreground">До конца акции:</div>
+                    <div className="flex gap-2 font-heading font-bold">
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl text-primary">{timeLeft.days}</span>
+                        <span className="text-xs text-muted-foreground">дней</span>
+                      </div>
+                      <span className="text-2xl text-muted-foreground">:</span>
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl text-secondary">{String(timeLeft.hours).padStart(2, '0')}</span>
+                        <span className="text-xs text-muted-foreground">часов</span>
+                      </div>
+                      <span className="text-2xl text-muted-foreground">:</span>
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl text-accent">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                        <span className="text-xs text-muted-foreground">минут</span>
+                      </div>
+                      <span className="text-2xl text-muted-foreground">:</span>
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                        <span className="text-xs text-muted-foreground">секунд</span>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
               </div>
               
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
