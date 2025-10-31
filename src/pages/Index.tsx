@@ -169,25 +169,126 @@ const Index = () => {
             </h2>
           </div>
           
-          <Card className="p-8 bg-card/50 backdrop-blur-sm">
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { label: "Ширина захвата", value: "до 2,14 м" },
-                { label: "Дальность выброса", value: "до 27 м" },
-                { label: "Мощность трактора", value: "до 81 л.с." },
-                { label: "Рабочая скорость", value: "3-5 км/ч" },
-                { label: "Толщина стали", value: "5 мм" },
-                { label: "Вес", value: "380 кг" },
-                { label: "Температура работы", value: "до -35°C" },
-                { label: "Гарантия", value: "2 года" }
-              ].map((spec, index) => (
-                <div key={index} className="flex justify-between items-center py-3 border-b border-border/30 last:border-0">
-                  <span className="font-body text-muted-foreground">{spec.label}</span>
-                  <span className="font-heading font-bold text-foreground">{spec.value}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
+          <div className="space-y-8">
+            <Card className="p-8 bg-card/50 backdrop-blur-sm">
+              <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Settings" size={24} className="text-primary" />
+                Основные характеристики
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { label: "Модель", value: "СШР-2.0" },
+                  { label: "Тип", value: "Шнекороторный" },
+                  { label: "Ширина захвата", value: "до 2,14 м" },
+                  { label: "Высота захвата", value: "до 0,8 м" },
+                  { label: "Дальность выброса", value: "до 27 м" },
+                  { label: "Производительность", value: "до 300 т/ч" },
+                  { label: "Рабочая скорость", value: "3-5 км/ч" },
+                  { label: "Вес", value: "380 кг" }
+                ].map((spec, index) => (
+                  <div key={index} className="flex justify-between items-center py-3 border-b border-border/30">
+                    <span className="font-body text-muted-foreground">{spec.label}</span>
+                    <span className="font-heading font-bold text-foreground">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card/50 backdrop-blur-sm">
+              <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Wrench" size={24} className="text-primary" />
+                Технические параметры
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { label: "Привод", value: "От ВОМ трактора" },
+                  { label: "Частота вращения ВОМ", value: "540 об/мин" },
+                  { label: "Мощность трактора", value: "до 81 л.с." },
+                  { label: "Класс тяги трактора", value: "1,4-2,0" },
+                  { label: "Навеска", value: "Трёхточечная" },
+                  { label: "Тип сцепки", value: "Категория II" },
+                  { label: "Гидравлика", value: "1 секция" },
+                  { label: "Давление гидросистемы", value: "160-180 кгс/см²" }
+                ].map((spec, index) => (
+                  <div key={index} className="flex justify-between items-center py-3 border-b border-border/30">
+                    <span className="font-body text-muted-foreground">{spec.label}</span>
+                    <span className="font-heading font-bold text-foreground">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card/50 backdrop-blur-sm">
+              <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="BoxSelect" size={24} className="text-primary" />
+                Конструкция
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { label: "Материал корпуса", value: "Сталь 5 мм" },
+                  { label: "Материал шнека", value: "Сталь 4 мм" },
+                  { label: "Материал ротора", value: "Сталь 8 мм" },
+                  { label: "Количество шнеков", value: "2 шт" },
+                  { label: "Лопасти ротора", value: "6 шт" },
+                  { label: "Поворот дефлектора", value: "360°" },
+                  { label: "Управление поворотом", value: "Гидравлика" },
+                  { label: "Регулировка высоты", value: "Механическая" }
+                ].map((spec, index) => (
+                  <div key={index} className="flex justify-between items-center py-3 border-b border-border/30">
+                    <span className="font-body text-muted-foreground">{spec.label}</span>
+                    <span className="font-heading font-bold text-foreground">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card/50 backdrop-blur-sm">
+              <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Snowflake" size={24} className="text-primary" />
+                Условия эксплуатации
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  { label: "Температура работы", value: "от -35°C до +5°C" },
+                  { label: "Тип снега", value: "Любой плотности" },
+                  { label: "Глубина снега", value: "до 80 см" },
+                  { label: "Лёд и наст", value: "Да" },
+                  { label: "Гарантия", value: "2 года" },
+                  { label: "Срок службы", value: "более 10 лет" },
+                  { label: "Обслуживание", value: "Минимальное" },
+                  { label: "Сертификация", value: "ГОСТ, ТР ТС" }
+                ].map((spec, index) => (
+                  <div key={index} className="flex justify-between items-center py-3 border-b border-border/30">
+                    <span className="font-body text-muted-foreground">{spec.label}</span>
+                    <span className="font-heading font-bold text-foreground">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-card/50 backdrop-blur-sm">
+              <h3 className="font-heading text-xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Package" size={24} className="text-primary" />
+                Комплектация
+              </h3>
+              <div className="space-y-3">
+                {[
+                  "Снегоротор в сборе",
+                  "Карданный вал с защитным кожухом",
+                  "Гидравлические шланги 2 шт",
+                  "Крепёжный комплект",
+                  "Руководство по эксплуатации",
+                  "Гарантийный талон",
+                  "Комплект запчастей для ТО"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3 py-2">
+                    <Icon name="Check" size={20} className="text-green-500" />
+                    <span className="font-body">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
 
