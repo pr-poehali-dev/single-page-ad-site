@@ -66,9 +66,9 @@ const Index = () => {
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary blur-3xl opacity-30 animate-pulse" />
               <img 
-                src="https://cdn.poehali.dev/projects/ba720415-65fd-4da6-81c2-32afa7322906/files/195ef6c5-cdae-4f5f-843e-7038ef085fe2.jpg"
+                src="https://cdn.poehali.dev/files/84c41e84-7407-4a83-8adf-df9f073e20dc.jpg"
                 alt="Навесной снегоротор для МТЗ"
-                className="relative z-10 w-full h-auto drop-shadow-2xl"
+                className="relative z-10 w-full h-auto drop-shadow-2xl rounded-lg"
               />
             </div>
           </div>
