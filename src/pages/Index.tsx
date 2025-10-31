@@ -35,7 +35,7 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="inline-block">
                 <span className="px-4 py-2 rounded-full bg-primary/20 text-primary font-body font-medium text-sm">
-                  🔥 Акция! Скидка 15% до конца месяца
+                  🔥 Акция! До 31.12.25г. карданный вал в подарок!
                 </span>
               </div>
               
