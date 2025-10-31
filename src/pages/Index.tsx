@@ -162,12 +162,102 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">
               Технические характеристики
             </h2>
+            <p className="font-body text-lg text-muted-foreground">
+              Официальный каталог снегоочистителей шнековых роторных
+            </p>
           </div>
+
+          <Card className="p-8 mb-8 bg-card/50 backdrop-blur-sm">
+            <div className="grid lg:grid-cols-2 gap-8 items-center mb-8">
+              <div>
+                <img 
+                  src="https://cdn.poehali.dev/files/883d5027-80bd-415e-b14b-86831676714f.png"
+                  alt="Технические характеристики снегоротора"
+                  className="w-full h-auto rounded-lg border border-border/50"
+                />
+              </div>
+              <div>
+                <h3 className="font-heading text-2xl font-bold mb-4">
+                  Серия СШР
+                </h3>
+                <p className="font-body text-muted-foreground mb-6 leading-relaxed">
+                  Снегоочиститель предназначен для уборки снега на улицах, фермах, стадионах, для очистки дорог от слежавшегося снега, удаления снежных валов с дорог, образовавшихся при работе бульдозеров и плужных снегоочистителей.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <Icon name="Check" size={20} className="text-green-500 mt-1" />
+                    <div>
+                      <div className="font-body font-semibold">СШР-145</div>
+                      <div className="font-body text-sm text-muted-foreground">Для тракторов 0,6 тягового класса, 18-30 л.с.</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Icon name="Check" size={20} className="text-green-500 mt-1" />
+                    <div>
+                      <div className="font-body font-semibold">СШР-175</div>
+                      <div className="font-body text-sm text-muted-foreground">Для тракторов 0,9 тягового класса, 35-50 л.с.</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Icon name="Check" size={20} className="text-green-500 mt-1" />
+                    <div>
+                      <div className="font-body font-semibold">СШР-214</div>
+                      <div className="font-body text-sm text-muted-foreground">Для универсальных тракторов 1,4 тягового класса, 55-75 л.с.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full font-body text-sm">
+                <thead>
+                  <tr className="border-b-2 border-primary/50">
+                    <th className="text-left py-3 px-4 font-heading font-bold">Характеристика</th>
+                    <th className="text-center py-3 px-4 font-heading font-bold text-primary">СШР-145</th>
+                    <th className="text-center py-3 px-4 font-heading font-bold text-secondary">СШР-175</th>
+                    <th className="text-center py-3 px-4 font-heading font-bold text-accent">СШР-214</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { label: "Ширина уборки, мм", v1: "1450", v2: "1700", v3: "2100" },
+                    { label: "Высота убираемого снежного покрова, мм, до", v1: "630", v2: "762", v3: "—" },
+                    { label: "Габаритные размеры (ДхШхВ), мм", v1: "1540х900х1450", v2: "1780х1270х2000", v3: "2170х1270х2000" },
+                    { label: "Масса, кг, не более", v1: "190", v2: "350", v3: "450" },
+                    { label: "Дальность бросания, мм", v1: "До 25000", v2: "До 25000", v3: "До 25000" },
+                    { label: "Привод", v1: "От ВОМ трактора", v2: "От ВОМ трактора", v3: "От ВОМ трактора" },
+                    { label: "Частота вращения ВОМ трактора, об/мин", v1: "540", v2: "540", v3: "540" },
+                    { label: "Количество шнеков, шт.", v1: "2", v2: "1", v3: "1" },
+                    { label: "Диаметр ротора-метателя, мм", v1: "490", v2: "580", v3: "—" },
+                    { label: "Управление снегоотбрасывателем", v1: "ручное", v2: "гидросистемой", v3: "гидросистемой" },
+                    { label: "Гарантия, мес.", v1: "12", v2: "12", v3: "12" }
+                  ].map((row, index) => (
+                    <tr key={index} className="border-b border-border/30 hover:bg-primary/5 transition-colors">
+                      <td className="py-3 px-4 text-muted-foreground">{row.label}</td>
+                      <td className="py-3 px-4 text-center font-semibold">{row.v1}</td>
+                      <td className="py-3 px-4 text-center font-semibold">{row.v2}</td>
+                      <td className="py-3 px-4 text-center font-semibold">{row.v3}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
+              <div className="flex items-start gap-3">
+                <Icon name="AlertTriangle" size={20} className="text-yellow-500 mt-0.5" />
+                <div className="font-body text-sm">
+                  <span className="font-semibold">Внимание!</span> Любое другое использование является использованием не по назначению.
+                </div>
+              </div>
+            </div>
+          </Card>
           
           <div className="space-y-8">
             <Card className="p-8 bg-card/50 backdrop-blur-sm">
