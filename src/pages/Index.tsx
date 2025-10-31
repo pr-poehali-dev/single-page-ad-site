@@ -15,19 +15,19 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="inline-block">
                 <span className="px-4 py-2 rounded-full bg-primary/20 text-primary font-body font-medium text-sm">
-                  Новинка 2025
+                  Зима 2024-2025
                 </span>
               </div>
               
               <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl font-black leading-none">
-                Звук нового
+                Снег не
                 <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  поколения
+                  проблема
                 </span>
               </h1>
               
               <p className="font-body text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-lg">
-                Погрузитесь в мир кристально чистого звука с технологией активного шумоподавления и 48 часами автономной работы
+                Навесной снегоротор для МТЗ-80/82. Убирает снег на расстояние до 15 метров за один проход. Производительность до 300 тонн/час
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -35,30 +35,30 @@ const Index = () => {
                   size="lg" 
                   className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all hover:scale-105 font-body font-semibold"
                 >
-                  Заказать сейчас
-                  <Icon name="ArrowRight" className="ml-2" size={20} />
+                  Заказать звонок
+                  <Icon name="Phone" className="ml-2" size={20} />
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
                   className="text-lg px-8 py-6 border-2 hover:bg-primary/10 transition-all font-body font-semibold"
                 >
-                  Узнать больше
+                  Характеристики
                 </Button>
               </div>
               
               <div className="flex gap-8 pt-4">
                 <div>
-                  <div className="font-heading text-3xl font-bold text-primary">48ч</div>
-                  <div className="font-body text-sm text-muted-foreground">Автономность</div>
+                  <div className="font-heading text-3xl font-bold text-primary">15м</div>
+                  <div className="font-body text-sm text-muted-foreground">Дальность выброса</div>
                 </div>
                 <div>
-                  <div className="font-heading text-3xl font-bold text-secondary">ANC</div>
-                  <div className="font-body text-sm text-muted-foreground">Шумоподавление</div>
+                  <div className="font-heading text-3xl font-bold text-secondary">300т</div>
+                  <div className="font-body text-sm text-muted-foreground">Тонн в час</div>
                 </div>
                 <div>
-                  <div className="font-heading text-3xl font-bold text-accent">Hi-Res</div>
-                  <div className="font-body text-sm text-muted-foreground">Качество звука</div>
+                  <div className="font-heading text-3xl font-bold text-accent">-35°C</div>
+                  <div className="font-body text-sm text-muted-foreground">Работа в мороз</div>
                 </div>
               </div>
             </div>
@@ -66,8 +66,8 @@ const Index = () => {
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary blur-3xl opacity-30 animate-pulse" />
               <img 
-                src="https://cdn.poehali.dev/projects/ba720415-65fd-4da6-81c2-32afa7322906/files/fbfb14c9-72fa-4b68-86c6-49b5cc063189.jpg"
-                alt="Premium Headphones"
+                src="https://cdn.poehali.dev/projects/ba720415-65fd-4da6-81c2-32afa7322906/files/195ef6c5-cdae-4f5f-843e-7038ef085fe2.jpg"
+                alt="Навесной снегоротор для МТЗ"
                 className="relative z-10 w-full h-auto drop-shadow-2xl"
               />
             </div>
@@ -81,44 +81,44 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black mb-4">
-              Почему выбирают нас
+              Преимущества нашего снегоротора
             </h2>
             <p className="font-body text-xl text-muted-foreground max-w-2xl mx-auto">
-              Технологии премиум-класса для идеального звучания
+              Надежное оборудование для профессиональной уборки снега
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: "Zap",
-                title: "Быстрая зарядка",
-                description: "10 минут зарядки = 5 часов прослушивания"
+                icon: "Wrench",
+                title: "Простой монтаж",
+                description: "Быстрая установка на МТЗ-80/82 без дополнительных переходников"
               },
               {
-                icon: "Volume2",
-                title: "Мощный звук",
-                description: "40мм драйверы с Hi-Res Audio сертификацией"
-              },
-              {
-                icon: "Headphones",
-                title: "Комфорт 24/7",
-                description: "Мягкие амбушюры из премиальной кожи"
-              },
-              {
-                icon: "Bluetooth",
-                title: "Bluetooth 5.3",
-                description: "Стабильное соединение до 30 метров"
+                icon: "Gauge",
+                title: "Мощность",
+                description: "Отбрасывает снег любой плотности до 15 метров"
               },
               {
                 icon: "Shield",
-                title: "Защита IPX4",
-                description: "Устойчивость к воде и поту"
+                title: "Надежность",
+                description: "Усиленный корпус из стали 5мм, выдерживает камни и лед"
               },
               {
-                icon: "Smartphone",
-                title: "Мульти-подключение",
-                description: "Одновременно до 2 устройств"
+                icon: "Snowflake",
+                title: "Морозостойкость",
+                description: "Работает при температуре до -35°C без потери эффективности"
+              },
+              {
+                icon: "Settings",
+                title: "Регулировка",
+                description: "Поворот выброса на 360° из кабины трактора"
+              },
+              {
+                icon: "CircleCheckBig",
+                title: "Гарантия 2 года",
+                description: "Полная гарантия и техподдержка на весь срок эксплуатации"
               }
             ].map((feature, index) => (
               <Card 
@@ -148,14 +148,14 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <div className="animate-fade-in">
             <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black mb-6">
-              Готовы ощутить
+              Готовы забыть о
               <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                разницу?
+                снежных заносах?
               </span>
             </h2>
             
             <p className="font-body text-xl md:text-2xl text-foreground/80 mb-12 max-w-2xl mx-auto">
-              Присоединяйтесь к 100,000+ довольных клиентов по всему миру
+              Более 500 фермерских хозяйств уже работают с нашим снегоротором
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -163,7 +163,7 @@ const Index = () => {
                 size="lg" 
                 className="text-xl px-12 py-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all hover:scale-105 font-body font-bold"
               >
-                Купить за 12,990₽
+                Купить за 185,000₽
                 <Icon name="ShoppingCart" className="ml-2" size={24} />
               </Button>
             </div>
@@ -171,11 +171,11 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-8 mt-12 text-sm text-muted-foreground font-body">
               <div className="flex items-center gap-2">
                 <Icon name="Truck" size={20} className="text-primary" />
-                Бесплатная доставка
+                Доставка по РФ
               </div>
               <div className="flex items-center gap-2">
-                <Icon name="RefreshCw" size={20} className="text-primary" />
-                14 дней на возврат
+                <Icon name="Wrench" size={20} className="text-primary" />
+                Монтаж в подарок
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="Award" size={20} className="text-primary" />
@@ -190,14 +190,14 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-body text-sm text-muted-foreground">
-              © 2025 SoundWave. Все права защищены
+              © 2025 СнегоТехника. Все права защищены
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                Политика конфиденциальности
+                Контакты
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                Условия использования
+                Доставка и оплата
               </a>
             </div>
           </div>
