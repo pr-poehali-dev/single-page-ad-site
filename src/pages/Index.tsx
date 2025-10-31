@@ -1,11 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useState } from "react";
 
 const Index = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="min-h-screen">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="font-heading text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            СНЕГОРОТОР СШР
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="tel:+78001234567" className="hidden md:flex items-center gap-2 font-body text-foreground hover:text-primary transition-colors">
+              <Icon name="Phone" size={20} />
+              <span className="font-semibold">8 (800) 123-45-67</span>
+            </a>
+            <Button onClick={() => setIsFormOpen(true)} className="bg-gradient-to-r from-primary to-secondary">
+              Заказать
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-background opacity-20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(217,70,239,0.1),transparent_50%)]" />
@@ -15,50 +35,53 @@ const Index = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="inline-block">
                 <span className="px-4 py-2 rounded-full bg-primary/20 text-primary font-body font-medium text-sm">
-                  Зима 2024-2025
+                  🔥 Акция! Скидка 15% до конца месяца
                 </span>
               </div>
               
-              <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl font-black leading-none">
-                Снег не
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+                Уберите снег за
                 <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  проблема
+                  один проход
                 </span>
               </h1>
               
-              <p className="font-body text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-lg">
-                Навесной снегоротор серии СШР для тракторов до 81 л.с. Дальность выброса до 27 м. Ширина захвата до 2,14 м
+              <p className="font-body text-xl md:text-2xl text-foreground/80 leading-relaxed">
+                Снегоротор серии СШР для тракторов до 81 л.с. Выбрасывает снег до 27 метров. Захват 2,14 м
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg" 
+                  onClick={() => setIsFormOpen(true)}
                   className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all hover:scale-105 font-body font-semibold"
                 >
-                  Заказать звонок
-                  <Icon name="Phone" className="ml-2" size={20} />
+                  Заказать со скидкой
+                  <Icon name="ArrowRight" className="ml-2" size={20} />
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="text-lg px-8 py-6 border-2 hover:bg-primary/10 transition-all font-body font-semibold"
-                >
-                  Характеристики
-                </Button>
+                <a href="#price">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="text-lg px-8 py-6 border-2 hover:bg-primary/10 transition-all font-body font-semibold w-full"
+                  >
+                    Узнать цену
+                  </Button>
+                </a>
               </div>
               
               <div className="flex gap-8 pt-4">
                 <div>
                   <div className="font-heading text-3xl font-bold text-primary">27м</div>
-                  <div className="font-body text-sm text-muted-foreground">Дальность выброса</div>
+                  <div className="font-body text-sm text-muted-foreground">Дальность</div>
                 </div>
                 <div>
                   <div className="font-heading text-3xl font-bold text-secondary">2.14м</div>
-                  <div className="font-body text-sm text-muted-foreground">Ширина захвата</div>
+                  <div className="font-body text-sm text-muted-foreground">Захват</div>
                 </div>
                 <div>
-                  <div className="font-heading text-3xl font-bold text-accent">-35°C</div>
-                  <div className="font-body text-sm text-muted-foreground">Работа в мороз</div>
+                  <div className="font-heading text-3xl font-bold text-accent">81 л.с.</div>
+                  <div className="font-body text-sm text-muted-foreground">Мощность</div>
                 </div>
               </div>
             </div>
@@ -67,7 +90,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary blur-3xl opacity-30 animate-pulse" />
               <img 
                 src="https://cdn.poehali.dev/files/84c41e84-7407-4a83-8adf-df9f073e20dc.jpg"
-                alt="Навесной снегоротор для МТЗ"
+                alt="Снегоротор СШР"
                 className="relative z-10 w-full h-auto drop-shadow-2xl rounded-lg"
               />
             </div>
@@ -75,64 +98,61 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black mb-4">
-              Преимущества нашего снегоротора
+      <section className="py-20 px-4 bg-primary/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">
+              Почему выбирают СШР?
             </h2>
-            <p className="font-body text-xl text-muted-foreground max-w-2xl mx-auto">
-              Надежное оборудование для профессиональной уборки снега
+            <p className="font-body text-lg text-muted-foreground">
+              Надежное оборудование для уборки снега
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: "Wrench",
-                title: "Простой монтаж",
-                description: "Быстрая установка на трактор до 81 л.с. без дополнительных переходников"
+                icon: "Zap",
+                title: "Мощный выброс",
+                description: "До 27 метров при любой плотности снега"
               },
               {
-                icon: "Gauge",
-                title: "Мощность",
-                description: "Отбрасывает снег любой плотности до 27 метров"
+                icon: "Maximize2",
+                title: "Широкий захват",
+                description: "2,14 метра за один проход"
               },
               {
                 icon: "Shield",
-                title: "Надежность",
-                description: "Усиленный корпус из стали 5мм, выдерживает камни и лед"
+                title: "Прочность",
+                description: "Сталь 5мм, справится с камнями и льдом"
               },
               {
                 icon: "Snowflake",
-                title: "Морозостойкость",
-                description: "Работает при температуре до -35°C без потери эффективности"
+                title: "До -35°C",
+                description: "Работает в любой мороз"
               },
               {
-                icon: "Settings",
-                title: "Регулировка",
-                description: "Поворот выброса на 360° из кабины трактора"
+                icon: "Wrench",
+                title: "Простая установка",
+                description: "Монтаж на трактор за 30 минут"
               },
               {
-                icon: "CircleCheckBig",
+                icon: "Award",
                 title: "Гарантия 2 года",
-                description: "Полная гарантия и техподдержка на весь срок эксплуатации"
+                description: "Полное гарантийное обслуживание"
               }
             ].map((feature, index) => (
               <Card 
                 key={index}
-                className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all hover:scale-105 group animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all hover:scale-105 group"
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Icon name={feature.icon} size={28} className="text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name={feature.icon} size={24} className="text-white" />
                 </div>
-                <h3 className="font-heading text-xl font-bold mb-2">
+                <h3 className="font-heading text-lg font-bold mb-2">
                   {feature.title}
                 </h3>
-                <p className="font-body text-muted-foreground">
+                <p className="font-body text-sm text-muted-foreground">
                   {feature.description}
                 </p>
               </Card>
@@ -141,68 +161,247 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-10" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20" />
-        
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <div className="animate-fade-in">
-            <h2 className="font-heading text-5xl md:text-6xl lg:text-7xl font-black mb-6">
-              Готовы забыть о
-              <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                снежных заносах?
-              </span>
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">
+              Технические характеристики
             </h2>
-            
-            <p className="font-body text-xl md:text-2xl text-foreground/80 mb-12 max-w-2xl mx-auto">
-              Более 500 фермерских хозяйств уже работают с нашим снегоротором
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="text-xl px-12 py-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all hover:scale-105 font-body font-bold"
-              >
-                Купить за 185,000₽
-                <Icon name="ShoppingCart" className="ml-2" size={24} />
-              </Button>
+          </div>
+          
+          <Card className="p-8 bg-card/50 backdrop-blur-sm">
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { label: "Ширина захвата", value: "до 2,14 м" },
+                { label: "Дальность выброса", value: "до 27 м" },
+                { label: "Мощность трактора", value: "до 81 л.с." },
+                { label: "Рабочая скорость", value: "3-5 км/ч" },
+                { label: "Толщина стали", value: "5 мм" },
+                { label: "Вес", value: "380 кг" },
+                { label: "Температура работы", value: "до -35°C" },
+                { label: "Гарантия", value: "2 года" }
+              ].map((spec, index) => (
+                <div key={index} className="flex justify-between items-center py-3 border-b border-border/30 last:border-0">
+                  <span className="font-body text-muted-foreground">{spec.label}</span>
+                  <span className="font-heading font-bold text-foreground">{spec.value}</span>
+                </div>
+              ))}
             </div>
-            
-            <div className="flex flex-wrap justify-center gap-8 mt-12 text-sm text-muted-foreground font-body">
-              <div className="flex items-center gap-2">
-                <Icon name="Truck" size={20} className="text-primary" />
-                Доставка по РФ
-              </div>
-              <div className="flex items-center gap-2">
-                <Icon name="Wrench" size={20} className="text-primary" />
-                Монтаж в подарок
-              </div>
-              <div className="flex items-center gap-2">
-                <Icon name="Award" size={20} className="text-primary" />
-                Гарантия 2 года
-              </div>
-            </div>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-background">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">
+              Отзывы клиентов
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                name: "Иван Петров",
+                company: "Фермерское хозяйство \"Заря\"",
+                text: "Взяли на пробу зимой 2023. Отработал без нареканий весь сезон. Убирает быстро, снег летит далеко.",
+                rating: 5
+              },
+              {
+                name: "Сергей Михайлов",
+                company: "ООО \"Агротехника\"",
+                text: "До этого работали китайским, сломался через месяц. СШР работает уже второй сезон без поломок. Рекомендую!",
+                rating: 5
+              },
+              {
+                name: "Алексей Соколов",
+                company: "КФХ \"Раздолье\"",
+                text: "Отличное соотношение цены и качества. Установка простая, обслуживание минимальное. Доволен покупкой.",
+                rating: 5
+              },
+              {
+                name: "Владимир Кузнецов",
+                company: "Сельхозпредприятие \"Нива\"",
+                text: "Брали сразу два снегоротора для техники. Работают отлично, справляются даже с мокрым снегом.",
+                rating: 5
+              }
+            ].map((review, index) => (
+              <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm">
+                <div className="flex gap-1 mb-3">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="fill-yellow-500 text-yellow-500" />
+                  ))}
+                </div>
+                <p className="font-body text-foreground mb-4 italic">"{review.text}"</p>
+                <div>
+                  <div className="font-heading font-bold text-sm">{review.name}</div>
+                  <div className="font-body text-xs text-muted-foreground">{review.company}</div>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <footer className="py-8 px-4 border-t border-border">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-body text-sm text-muted-foreground">
-              © 2025 СнегоТехника. Все права защищены
-            </p>
-            <div className="flex gap-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                Контакты
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-body text-sm">
-                Доставка и оплата
-              </a>
+      <section id="price" className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-10" />
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="font-heading text-4xl md:text-5xl font-black mb-6">
+            Специальная цена
+            <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              этого месяца
+            </span>
+          </h2>
+          
+          <Card className="p-8 md:p-12 bg-card/80 backdrop-blur-sm inline-block">
+            <div className="mb-6">
+              <div className="text-muted-foreground line-through text-2xl mb-2">218,000 ₽</div>
+              <div className="font-heading text-5xl md:text-6xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                185,000 ₽
+              </div>
+              <div className="inline-block mt-4 px-4 py-2 bg-red-500/20 text-red-500 rounded-full font-body font-semibold">
+                Экономия 33,000 ₽
+              </div>
             </div>
+            
+            <div className="space-y-3 mb-8 text-left max-w-md mx-auto">
+              {[
+                "Бесплатная доставка по РФ",
+                "Гарантия 2 года",
+                "Техподдержка 24/7",
+                "Инструкция по установке"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <Icon name="Check" size={20} className="text-green-500" />
+                  <span className="font-body">{item}</span>
+                </div>
+              ))}
+            </div>
+            
+            <Button 
+              size="lg"
+              onClick={() => setIsFormOpen(true)}
+              className="text-xl px-12 py-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all hover:scale-105 font-body font-bold"
+            >
+              Заказать сейчас
+              <Icon name="ShoppingCart" className="ml-2" size={24} />
+            </Button>
+            
+            <p className="font-body text-sm text-muted-foreground mt-6">
+              Акция действует до конца месяца
+            </p>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-primary/5">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-black mb-6">
+            Остались вопросы?
+          </h2>
+          <p className="font-body text-xl text-foreground/80 mb-8">
+            Звоните прямо сейчас или оставьте заявку
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="tel:+78001234567" className="flex items-center gap-2 text-2xl font-heading font-bold text-primary hover:text-secondary transition-colors">
+              <Icon name="Phone" size={28} />
+              8 (800) 123-45-67
+            </a>
+            <span className="text-muted-foreground hidden sm:block">или</span>
+            <Button 
+              size="lg"
+              onClick={() => setIsFormOpen(true)}
+              variant="outline"
+              className="text-lg px-8 py-6 border-2 font-body font-semibold"
+            >
+              Заказать звонок
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-12 px-4 border-t border-border/50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="font-heading text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              СНЕГОРОТОР СШР
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-body">
+              <div className="flex items-center gap-2">
+                <Icon name="Phone" size={16} />
+                8 (800) 123-45-67
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="Mail" size={16} />
+                info@sshr.ru
+              </div>
+              <div className="flex items-center gap-2">
+                <Icon name="MapPin" size={16} />
+                Москва, Россия
+              </div>
+            </div>
+          </div>
+          <div className="text-center mt-8 text-sm text-muted-foreground font-body">
+            © 2024 Снегоротор СШР. Все права защищены.
           </div>
         </div>
       </footer>
+
+      {isFormOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setIsFormOpen(false)}>
+          <Card className="w-full max-w-md p-8 bg-card" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="font-heading text-2xl font-bold">Заказать звонок</h3>
+              <button onClick={() => setIsFormOpen(false)} className="text-muted-foreground hover:text-foreground">
+                <Icon name="X" size={24} />
+              </button>
+            </div>
+            
+            <form className="space-y-4">
+              <div>
+                <label className="font-body text-sm text-muted-foreground mb-2 block">Ваше имя</label>
+                <input 
+                  type="text" 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary outline-none transition-colors"
+                  placeholder="Иван Иванов"
+                />
+              </div>
+              
+              <div>
+                <label className="font-body text-sm text-muted-foreground mb-2 block">Телефон</label>
+                <input 
+                  type="tel" 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary outline-none transition-colors"
+                  placeholder="+7 (___) ___-__-__"
+                />
+              </div>
+              
+              <div>
+                <label className="font-body text-sm text-muted-foreground mb-2 block">Комментарий (необязательно)</label>
+                <textarea 
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary outline-none transition-colors resize-none"
+                  rows={3}
+                  placeholder="Удобное время для звонка"
+                />
+              </div>
+              
+              <Button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all font-body font-semibold"
+                size="lg"
+              >
+                Отправить заявку
+              </Button>
+              
+              <p className="text-xs text-muted-foreground text-center">
+                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+              </p>
+            </form>
+          </Card>
+        </div>
+      )}
     </div>
   );
 };
