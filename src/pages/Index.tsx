@@ -27,7 +27,7 @@ const Index = () => {
               </h1>
               
               <p className="font-body text-xl md:text-2xl text-foreground/80 leading-relaxed max-w-lg">
-                Навесной снегоротор для МТЗ-80/82. Убирает снег на расстояние до 15 метров за один проход. Производительность до 300 тонн/час
+                Навесной снегоротор серии СШР для тракторов до 81 л.с. Дальность выброса до 27 м. Ширина захвата до 2,14 м
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -49,12 +49,12 @@ const Index = () => {
               
               <div className="flex gap-8 pt-4">
                 <div>
-                  <div className="font-heading text-3xl font-bold text-primary">15м</div>
+                  <div className="font-heading text-3xl font-bold text-primary">27м</div>
                   <div className="font-body text-sm text-muted-foreground">Дальность выброса</div>
                 </div>
                 <div>
-                  <div className="font-heading text-3xl font-bold text-secondary">300т</div>
-                  <div className="font-body text-sm text-muted-foreground">Тонн в час</div>
+                  <div className="font-heading text-3xl font-bold text-secondary">2.14м</div>
+                  <div className="font-body text-sm text-muted-foreground">Ширина захвата</div>
                 </div>
                 <div>
                   <div className="font-heading text-3xl font-bold text-accent">-35°C</div>
@@ -93,12 +93,12 @@ const Index = () => {
               {
                 icon: "Wrench",
                 title: "Простой монтаж",
-                description: "Быстрая установка на МТЗ-80/82 без дополнительных переходников"
+                description: "Быстрая установка на трактор до 81 л.с. без дополнительных переходников"
               },
               {
                 icon: "Gauge",
                 title: "Мощность",
-                description: "Отбрасывает снег любой плотности до 15 метров"
+                description: "Отбрасывает снег любой плотности до 27 метров"
               },
               {
                 icon: "Shield",
