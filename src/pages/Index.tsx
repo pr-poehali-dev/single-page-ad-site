@@ -134,7 +134,7 @@ const Index = () => {
               {
                 icon: "Wrench",
                 title: "Простая установка",
-                description: "Монтаж на трактор за 30 минут"
+                description: "Монтаж на трактор за 10 минут"
               },
               {
                 icon: "Award",
