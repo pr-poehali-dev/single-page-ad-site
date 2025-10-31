@@ -363,17 +363,18 @@ const Index = () => {
               </h3>
               <div className="space-y-3">
                 {[
-                  "Снегоротор в сборе",
-                  "Карданный вал с защитным кожухом",
-                  "Гидравлические шланги 2 шт",
-                  "Крепёжный комплект",
-                  "Руководство по эксплуатации",
-                  "Гарантийный талон",
-                  "Комплект запчастей для ТО"
+                  { text: "Снегоротор в сборе", isGift: false },
+                  { text: "Карданный вал с защитным кожухом 🎁", isGift: true },
+                  { text: "Гидравлические шланги 2 шт", isGift: false },
+                  { text: "Крепёжный комплект", isGift: false },
+                  { text: "Руководство по эксплуатации", isGift: false },
+                  { text: "Гарантийный талон", isGift: false },
+                  { text: "Комплект запчастей для ТО", isGift: false }
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-3 py-2">
-                    <Icon name="Check" size={20} className="text-green-500" />
-                    <span className="font-body">{item}</span>
+                  <div key={index} className={`flex items-center gap-3 py-2 ${item.isGift ? 'bg-primary/10 -mx-3 px-3 rounded-lg' : ''}`}>
+                    <Icon name="Check" size={20} className={item.isGift ? "text-primary" : "text-green-500"} />
+                    <span className={`font-body ${item.isGift ? 'font-semibold text-primary' : ''}`}>{item.text}</span>
+                    {item.isGift && <span className="ml-auto text-xs bg-primary text-white px-2 py-1 rounded-full">До 31.12.25</span>}
                   </div>
                 ))}
               </div>
