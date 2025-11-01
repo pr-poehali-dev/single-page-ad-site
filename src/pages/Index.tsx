@@ -42,9 +42,9 @@ const Index = () => {
             СНЕГОРОТОР СШР
           </div>
           <div className="flex items-center gap-4">
-            <a href="tel:+78001234567" className="hidden md:flex items-center gap-2 font-body text-foreground hover:text-primary transition-colors">
+            <a href="tel:+79870045757" className="hidden md:flex items-center gap-2 font-body text-foreground hover:text-primary transition-colors">
               <Icon name="Phone" size={20} />
-              <span className="font-semibold">8 (800) 123-45-67</span>
+              <span className="font-semibold">+7 987 004 57 57</span>
             </a>
             <Button onClick={() => setIsFormOpen(true)} className="bg-gradient-to-r from-primary to-secondary">
               Заказать
