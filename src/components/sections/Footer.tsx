@@ -34,6 +34,12 @@ export const Footer = () => {
                 rmz-ru@yandex.ru
               </a>
             </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground font-body">
+              <Icon name="Globe" size={16} />
+              <a href="https://k-rmz.ru/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                k-rmz.ru
+              </a>
+            </div>
           </div>
         </div>
         
