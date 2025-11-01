@@ -23,7 +23,7 @@ export const VideoSection = ({ onOrderClick }: VideoSectionProps) => {
           <div className="relative pt-[56.25%]">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://disk.yandex.ru/i/_Sb0NTEFePJdTQ"
+              src="https://rutube.ru/play/embed/2181d18cc9034cabf436ce805b7a63ed"
               title="Снегоротор СШР в действии"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
