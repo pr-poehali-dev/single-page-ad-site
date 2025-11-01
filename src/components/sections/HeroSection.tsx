@@ -76,7 +76,7 @@ export const HeroSection = ({ timeLeft, onOrderClick }: HeroSectionProps) => {
               <span className="font-body text-lg text-muted-foreground">с карданным валом</span>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="pt-4">
               <Button 
                 size="lg" 
                 onClick={onOrderClick}
@@ -85,15 +85,6 @@ export const HeroSection = ({ timeLeft, onOrderClick }: HeroSectionProps) => {
                 Заказать со скидкой
                 <Icon name="ArrowRight" className="ml-2" size={20} />
               </Button>
-              <a href="#price">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="text-lg px-8 py-6 border-2 hover:bg-primary/10 transition-all font-body font-semibold w-full"
-                >
-                  Узнать цену
-                </Button>
-              </a>
             </div>
             
             <div className="flex gap-8 pt-4">
