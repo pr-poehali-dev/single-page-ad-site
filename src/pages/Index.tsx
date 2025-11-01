@@ -500,58 +500,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="price" className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-10" />
-        
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="font-heading text-4xl md:text-5xl font-black mb-6">
-            Специальная цена
-            <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              этого месяца
-            </span>
-          </h2>
-          
-          <Card className="p-8 md:p-12 bg-card/80 backdrop-blur-sm inline-block">
-            <div className="mb-6">
-              <div className="text-muted-foreground line-through text-2xl mb-2">218,000 ₽</div>
-              <div className="font-heading text-5xl md:text-6xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                185,000 ₽
-              </div>
-              <div className="inline-block mt-4 px-4 py-2 bg-red-500/20 text-red-500 rounded-full font-body font-semibold">
-                Экономия 33,000 ₽
-              </div>
-            </div>
-            
-            <div className="space-y-3 mb-8 text-left max-w-md mx-auto">
-              {[
-                "Бесплатная доставка по РФ",
-                "Гарантия 1 год",
-                "Техподдержка 24/7",
-                "Инструкция по установке"
-              ].map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <Icon name="Check" size={20} className="text-green-500" />
-                  <span className="font-body">{item}</span>
-                </div>
-              ))}
-            </div>
-            
-            <Button 
-              size="lg"
-              onClick={() => setIsFormOpen(true)}
-              className="text-xl px-12 py-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all hover:scale-105 font-body font-bold"
-            >
-              Заказать сейчас
-              <Icon name="ShoppingCart" className="ml-2" size={24} />
-            </Button>
-            
-            <p className="font-body text-sm text-muted-foreground mt-6">
-              Акция действует до конца месяца
-            </p>
-          </Card>
-        </div>
-      </section>
-
       <section className="py-20 px-4 bg-primary/5">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-6">
