@@ -108,6 +108,13 @@ const Index = () => {
                 Снегоротор серии СШР для тракторов до 81 л.с. Выбрасывает снег до 27 метров. Захват 2,14 м
               </p>
               
+              <div className="inline-flex items-baseline gap-3 bg-gradient-to-r from-primary/10 to-secondary/10 px-6 py-4 rounded-2xl border-2 border-primary/20">
+                <span className="font-heading text-5xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  363 000 ₽
+                </span>
+                <span className="font-body text-lg text-muted-foreground">с карданным валом</span>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg" 
