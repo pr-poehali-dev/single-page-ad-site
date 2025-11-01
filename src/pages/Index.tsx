@@ -562,9 +562,9 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:+78001234567" className="flex items-center gap-2 text-2xl font-heading font-bold text-primary hover:text-secondary transition-colors">
+            <a href="tel:+79870045757" className="flex items-center gap-2 text-2xl font-heading font-bold text-primary hover:text-secondary transition-colors">
               <Icon name="Phone" size={28} />
-              8 (800) 123-45-67
+              +7 987 004 57 57
             </a>
             <span className="text-muted-foreground hidden sm:block">или</span>
             <Button 
@@ -588,7 +588,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-body">
               <div className="flex items-center gap-2">
                 <Icon name="Phone" size={16} />
-                8 (800) 123-45-67
+                +7 987 004 57 57
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="Mail" size={16} />
@@ -614,6 +614,16 @@ const Index = () => {
               <button onClick={() => setIsFormOpen(false)} className="text-muted-foreground hover:text-foreground">
                 <Icon name="X" size={24} />
               </button>
+            </div>
+            
+            <div className="mb-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+              <div className="flex items-center justify-center gap-2 text-lg font-heading font-bold text-primary">
+                <Icon name="Phone" size={20} />
+                <a href="tel:+79870045757" className="hover:text-secondary transition-colors">
+                  +7 987 004 57 57
+                </a>
+              </div>
+              <p className="text-center text-sm text-muted-foreground mt-2">Или оставьте заявку и мы перезвоним</p>
             </div>
             
             <form className="space-y-4">
